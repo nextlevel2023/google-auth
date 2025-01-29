@@ -35,7 +35,6 @@ const authentication = (config) => {
             } else {
               // User found, proceed with authentication
               return cb(null, u.session_object);
-            }
           });
         }
       ),
