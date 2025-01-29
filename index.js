@@ -13,7 +13,7 @@ const authentication = (config) => {
   const params = {
     clientID: config.clientID || "nokey",
     clientSecret: config.clientSecret || "nosecret",
-    callbackURL: ${ensure_final_slash(cfg_base_url)}auth/callback/google,
+    callbackURL: ensure_final_slash(cfg_base_url)}auth/callback/google,
   };
   return {
     google: {
@@ -35,6 +35,7 @@ const authentication = (config) => {
             } else {
               // User found, proceed with authentication
               return cb(null, u.session_object);
+            }
           });
         }
       ),
